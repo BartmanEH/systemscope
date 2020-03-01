@@ -1,3 +1,7 @@
+"First commit" changes
+- default connect IP: 192.168.1.47
+- default username and password added for connection
+
 # System Scope
 
 It's a native Mac client for connecting to Dell DRAC modules.
