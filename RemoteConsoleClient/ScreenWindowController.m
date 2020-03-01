@@ -175,7 +175,8 @@
     [addressBarTextField setTarget:self];
     [addressBarTextField setAction:@selector(addressBarHitEnter:)];
     [addressBarTextField setUsesSingleLineMode:YES];
-    [addressBarTextField setPlaceholderString:@"Connect to host..."];
+    //[addressBarTextField setPlaceholderString:@"Connect to host..."];                         //Bartman
+    [addressBarTextField setPlaceholderString:@"192.168.1.47"];                                 //Bartman
     [addressBar setView:addressBarTextField];
     
     toolbar = [[NSToolbar alloc] initWithIdentifier:@"toolbar"];
@@ -186,8 +187,12 @@
 }
 
 - (void)addressBarHitEnter:(id)sender {
-    if ([[addressBarTextField stringValue] isEqualToString:@""])
-        return;
+    if ([[addressBarTextField stringValue] isEqualToString:@""]) {                              //Bartman {
+        [addressBarTextField setStringValue:[[addressBarTextField cell] placeholderString]];    //Bartman
+        [[connectionSheet usernameTextField] setStringValue:@"root"];                           //Bartman
+        [[connectionSheet passwordTextField] setStringValue:@"calvin"];                         //Bartman
+        //return;                                                                               //Bartman
+    }                                                                                           //Bartman }
 
     [self updateProgress:1 withString:@"Connecting..."];
 
@@ -258,6 +263,13 @@
         port = [portNumber unsignedIntegerValue];
     if (port == 0 )
         port = 443;
+    if ([[[connectionSheet usernameTextField] stringValue] isEqualToString:@""]) {              //Bartman
+        [[connectionSheet usernameTextField] setStringValue:@"root"];                           //Bartman
+    }                                                                                           //Bartman
+    if ([[[connectionSheet passwordTextField] stringValue] isEqualToString:@""]) {              //Bartman
+        [[connectionSheet passwordTextField] setStringValue:@"calvin"];                         //Bartman
+    }                                                                                           //Bartman
+
     [self startConnectionWithHost:host withPort:port withUser:[[connectionSheet usernameTextField] stringValue] withPassword:[[connectionSheet passwordTextField] stringValue]];
 }
 

@@ -270,7 +270,7 @@
 				ORGANIZATIONNAME = "Scott J. Goldman";
 				TargetAttributes = {
 					4139729E1838A39C00653313 = {
-						DevelopmentTeam = MTLNCV5G72;
+						DevelopmentTeam = 6WVDWQMUGB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -280,6 +280,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -470,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MTLNCV5G72;
+				DEVELOPMENT_TEAM = 6WVDWQMUGB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					.,
@@ -498,7 +499,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MTLNCV5G72;
+				DEVELOPMENT_TEAM = 6WVDWQMUGB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					.,
@@ -577,7 +578,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = MTLNCV5G72;
+				DEVELOPMENT_TEAM = 6WVDWQMUGB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					.,
